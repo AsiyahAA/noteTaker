@@ -10,11 +10,11 @@ app.use(express.urlencoded({extended: false}))
 app.use(express.json())
 
 app.get("/home", (req,res)=>{
-    res.sendFile(path.join(__dirname, "./public/index.html"))
+    res.sendFile(path.join(__dirname, "./index.html"))
 })
 
 app.get("/notes", (req,res)=>{
-    res.sendFile(path.join(__dirname, "./public/notes.html"))
+    res.sendFile(path.join(__dirname, "./notes.html"))
 })
 
 app.get("/api/notes", (req,res)=>{

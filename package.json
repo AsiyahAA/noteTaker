@@ -4,7 +4,7 @@
   "main": "server.js",
   "author": "",
   "license": "ISC",
-  "scripts":{
+  "scripts": {
     "start": "node server.js"
   },
   "dependencies": {
