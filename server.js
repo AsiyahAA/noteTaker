@@ -34,6 +34,6 @@ app.post("/api/notes", (req,res)=>{
 })
 
 app.listen(PORT, ()=>{
-    console.log("server connected")
+    console.log("server connected to port " + PORT);
 })
 
