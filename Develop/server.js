@@ -2,6 +2,7 @@ const express = require("express")
 const fs = require("fs")
 const path = require("path")
 const app = express()
+const PORT = process.env.PORT || 3001;
 const db = require("./db/db.json")
 
 app.use(express.static("public"));
@@ -33,7 +34,7 @@ app.post("/api/notes", (req,res)=>{
 
 })
 
-app.listen(3001, ()=>{
+app.listen(PORT, ()=>{
     console.log("server connected")
 })
 
