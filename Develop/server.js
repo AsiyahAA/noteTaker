@@ -22,7 +22,6 @@ app.get("/api/notes", (req,res)=>{
 })
 
 app.post("/api/notes", (req,res)=>{ 
-    // save whatever the browser sent us and then save it to the db.json
     const data = req.body;
     db.push(data);
 
