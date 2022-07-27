@@ -1,15 +1,18 @@
 const express = require("express")
 const fs = require("fs")
 const path = require("path")
-const app = express()
-const PORT = process.env.PORT || 3000;
 const db = require("./db/db.json")
 
-app.use(express.static("public"));
-app.use(express.urlencoded({extended: false}))
+const app = express()
+
+const PORT = process.env.PORT || 3000;
 app.use(express.json())
 
-app.get("/home", (req,res)=>{
+app.use(express.static("public"));
+app.use(express.urlencoded({extended: true}))
+
+
+app.get("/", (req,res)=>{
     res.sendFile(path.join(__dirname, "./index.html"))
 })
 
